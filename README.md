@@ -57,12 +57,13 @@ Abaixo, você pode ver o sistema em funcionamento:
    
    ---
    
-   📝 Estrutura do Código
+## 📝 Estrutura do Código
 - ***Program.cs***: Contém a lógica de interface, menu e persistência de dados.
 
 - ***Medicamento.cs***: Classe de modelo que gerencia as propriedades e regras de negócio de cada remédio.
 
-- ***dados.json***: Arquivo gerado automaticamente para armazenamento das informações
-Desenvolvido com ❤️ para ajudar na organização da sua saúde.
+- ***dados.json***: Arquivo gerado automaticamente para armazenamento das informações.
+
+## Desenvolvido com ❤️ para ajudar na organização da sua saúde.
 
 Feito por Lucas Farias
