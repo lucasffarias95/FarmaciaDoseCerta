@@ -37,22 +37,23 @@ Abaixo, você pode ver o sistema em funcionamento:
 
 ---
 
-## 🚀 Como Executar o Projeto
+## ⚙️ Como executar o projeto
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/lucasffarias95/FarmaciaDoseCerta.git](https://github.com/SEU-USUARIO/FarmaciaDoseCerta.git)
-   ```
-   
+   git clone [https://github.com/lucasffarias95/FarmaciaDoseCerta.git](https://github.com/SEU-USUARIO/FarmaciaDoseCerta.git)
+   ```
 2. Entre na pasta do projeto:
-   ```bash
-   cd FarmaciaDoseCerta
-   ```
-   
-   3. Execute o projeto:
    ```bash
-   dotnet run
-   ```
+    cd CalculadoraSimples
+   ```
+   
+3. Execute o projeto:
+   ```bash
+   dotnet run
+   ```
+   
+
    
    ---
    
@@ -61,6 +62,7 @@ Abaixo, você pode ver o sistema em funcionamento:
 
 - ***Medicamento.cs***: Classe de modelo que gerencia as propriedades e regras de negócio de cada remédio.
 
-- ***dados.json***: Arquivo gerado automaticamente para armazenamento das informações.
-
+- ***dados.json***: Arquivo gerado automaticamente para armazenamento das informações
 Desenvolvido com ❤️ para ajudar na organização da sua saúde.
+
+Feito por Lucas Farias
