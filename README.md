@@ -40,6 +40,7 @@ Abaixo, você pode ver o sistema em funcionamento:
 ## 🚀 Como Executar o Projeto
 
 1. Clone o repositório:
+
    ```bash
    git clone [https://github.com/SEU-USUARIO/FarmaciaDoseCerta.git](https://github.com/SEU-USUARIO/FarmaciaDoseCerta.git)
    ```
