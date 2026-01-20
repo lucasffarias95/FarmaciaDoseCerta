@@ -1,15 +1,18 @@
 ﻿using System;
 using System.IO;
+using System.Text.Json;
 using FarmaciaDoseCerta;
+using System.Collections.Generic;
 
 namespace FarmaciaDoseCerta
 {
     public class Program
     {
+        static string caminhoArquivo = "dados.json";
         static void Main(string[] args)
         {
             // Instância inicial do medicamento
-            List<Medicamento> listaMedicamentos = new List<Medicamento>();
+            List<Medicamento> listaMedicamentos = CarregarDados();
 
             int opcao = 0;
 
@@ -67,6 +70,8 @@ namespace FarmaciaDoseCerta
                             Medicamento novoMed = new Medicamento(nome, dose, estoque, min, intervalo, DateTime.Now);
                             listaMedicamentos.Add(novoMed);
 
+                            SalvarDados(listaMedicamentos);
+
                             Console.WriteLine("\nRemédio cadastrado com sucesso!");
                             Console.ReadKey();
                             break;
@@ -82,6 +87,7 @@ namespace FarmaciaDoseCerta
                                     if (selecionado.EstoqueAtual >= selecionado.Dose)
                                     {
                                         selecionado.RegistrarDose();
+                                        SalvarDados(listaMedicamentos);
                                         Console.WriteLine("\nDose registrada!");
                                     }
                                     else
@@ -104,6 +110,7 @@ namespace FarmaciaDoseCerta
                                     Console.Write("Quantidade comprada: ");
                                     int qtd = int.Parse(Console.ReadLine());
                                     listaMedicamentos[idxRepo].ReporEstoque(qtd);
+                                    SalvarDados(listaMedicamentos);
                                     Console.WriteLine("\nEstoque atualizado!");
                                 }
                             }
@@ -135,6 +142,26 @@ namespace FarmaciaDoseCerta
                     Console.ReadKey();
                 }
             }
+        }
+        static void SalvarDados(List<Medicamento> lista)
+        {
+            string json = JsonSerializer.Serialize(lista, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(caminhoArquivo, json);
+        }
+
+        static List<Medicamento> CarregarDados()
+        {
+            try
+            {
+                if (File.Exists(caminhoArquivo))
+                {
+                    string json = File.ReadAllText(caminhoArquivo);
+                    return JsonSerializer.Deserialize<List<Medicamento>>(json) ?? new List<Medicamento>();
+                }
+            }
+            catch { }
+
+            return new List<Medicamento>();
         }
     }
 }
