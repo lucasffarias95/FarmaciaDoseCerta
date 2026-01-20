@@ -41,7 +41,7 @@ Abaixo, você pode ver o sistema em funcionamento:
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/lucasffarias95/FarmaciaDoseCerta.git](https://github.com/SEU-USUARIO/FarmaciaDoseCerta.git)
+   git clone [https://github.com/lucasffarias95/FarmaciaDoseCerta.git](https://github.com/lucasffarias95/FarmaciaDoseCerta.git)
    ```
 2. Entre na pasta do projeto:
    ```bash
