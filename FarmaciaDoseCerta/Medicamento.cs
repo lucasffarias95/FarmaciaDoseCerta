@@ -35,6 +35,11 @@ namespace FarmaciaDoseCerta
         }
 
         public bool PrecisaRepor() { return EstoqueAtual <= EstoqueMinimo; }
+
+        public void ReporEstoque(int quantidade)
+        {
+            EstoqueAtual += quantidade;
+        }
     }
 }
 
