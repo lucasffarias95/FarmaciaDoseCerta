@@ -44,6 +44,7 @@ namespace FarmaciaDoseCerta
                     Console.WriteLine("1. Registrar que tomei uma dose");
                     Console.WriteLine("2. Repor estoque (comprar mais)");
                     Console.WriteLine("3. Sair");
+                    Console.WriteLine("4. Remover medicamento");
                     Console.Write("\nO que deseja fazer? ");
 
                     opcao = int.Parse(Console.ReadLine());
@@ -122,7 +123,28 @@ namespace FarmaciaDoseCerta
                             Console.WriteLine("\nSaindo... Use o medicamento com responsabilidade!");
                             break;
 
-                        default:
+                        case 4:
+                            if(listaMedicamentos.Count > 0)
+                            {
+                                Console.WriteLine("Digite o número do remédio que deseja remover :");
+                                int idxRemover = int.Parse(Console.ReadLine());
+
+                                if (idxRemover >= 0 && idxRemover < listaMedicamentos.Count)
+                                {
+                                    Console.WriteLine($"Removendo {listaMedicamentos[idxRemover].Nome}...");
+                                    listaMedicamentos.RemoveAt(idxRemover);
+
+                                    SalvarDados(listaMedicamentos);
+
+                                    Console.WriteLine("\nRemovido com sucesso!");
+                                }
+                                else { Console.WriteLine("\nNúmero inválido!"); }
+                            }
+                        else { Console.WriteLine("\nNão há nada para remover!"); }
+                            Console.ReadKey();
+                        break;
+
+                                default:
                             Console.WriteLine("\nOpção inválida! Tente novamente.");
                             Console.ReadKey();
                             break;
