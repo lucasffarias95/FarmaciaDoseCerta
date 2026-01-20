@@ -40,16 +40,17 @@ Abaixo, você pode ver o sistema em funcionamento:
 ## 🚀 Como Executar o Projeto
 
 1. Clone o repositório:
-
-   ```bash
-   git clone [https://github.com/SEU-USUARIO/FarmaciaDoseCerta.git](https://github.com/SEU-USUARIO/FarmaciaDoseCerta.git)
+   ```bash
+   git clone [https://github.com/lucasffarias95/FarmaciaDoseCerta.git](https://github.com/SEU-USUARIO/FarmaciaDoseCerta.git)
    ```
    
+2. Entre na pasta do projeto:
    ```bash
    cd FarmaciaDoseCerta
    ```
    
-   ```bash
+   3. Execute o projeto:
+   ```bash
    dotnet run
    ```
    
